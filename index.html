@@ -27,23 +27,23 @@
 
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
-    center: [41.77, -72.69], // EDIT coordinates to re-center map
+    center: [37.32130142507266, -121.87532504661328], // EDIT coordinates to re-center map
     zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: false,
     tap: false
   });
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://osm.org/copyright">\
-        OpenStreetMap</a> contributors, &copy;\
-        <a href="https://carto.com/attribution">CARTO</a>'
+var Thunderforest_Transport = L.tileLayer('https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	apikey: '<your apikey>',
+	maxZoom: 22
+});
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
-  L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
-  .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
+  L.marker([37.32130142507266, -121.87532504661328]).addTo(map) // EDIT marker coordinates
+  .bindPopup("San Jose, California"); // EDIT pop-up text message
 
   </script>
 </body>
