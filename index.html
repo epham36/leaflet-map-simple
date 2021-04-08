@@ -27,7 +27,7 @@
 
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
-    center: [37.32130142507266, -121.87532504661328], // EDIT coordinates to re-center map
+    center: [37.32, -121.87], // EDIT coordinates to re-center map
     zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: false,
     tap: false
@@ -42,7 +42,7 @@ L.tileLayer(
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
-  L.marker([37.32130142507266, -121.87532504661328]).addTo(map) // EDIT marker coordinates
+  L.marker([37.32, -121.87]).addTo(map) // EDIT marker coordinates
   .bindPopup("San Jose, California"); // EDIT pop-up text message
 
   </script>
